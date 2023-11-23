@@ -1,0 +1,85 @@
+<DOCYTPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mi pagina con slider y sonido al estilo rockola</title>
+    <style>
+        body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0%;
+padding: 0%;
+background-color: bisque;
+text-align: center;
+}
+
+#container {
+max-width: 800px;
+margin: 20px auto;
+background-color: aquamarine;
+box-shadow:0 0 10px rgb(241, 236, 236);
+padding: 20px;
+border-radius: 10px;
+}
+#slider {
+width: 100%;
+overflow: hidden;
+border: 5px solid #333;
+border-radius: 10px;
+box-shadow: 0 0 10px rgb(red,);
+}
+#slider img {
+width: 100%;
+height: auto;
+display: none;
+}
+audio {
+width: 100%;
+margin-top: 20%;
+}
+</style>
+ </head>
+  <body>
+    <div id="container">
+        <h1>mi pagina con Slider y sonido al estilo Rockola</h1>
+
+<div id="slider">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgEBxMQZAyy61J0ylBInuMJ-Ed2OswSmQvA&usqp=CAU" alt="imagen 1">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgEBxMQZAyy61J0ylBInuMJ-Ed2OswSmQvA&usqp=CAU" alt="imagen 2">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgEBxMQZAyy61J0ylBInuMJ-Ed2OswSmQvA&usqp=CAU" alt="imagen 3">
+</div>
+
+<audio control>
+    <source src="mariachi.mp3" type="audio/mp3">
+    tu navegador no soporta el elemento de audio
+    </audio>
+    </div>
+
+    <body>
+        
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.querySelectorAll('#slider img');
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = 'block';
+setTimeout(showSlides, 3000); // Cambia la imagen cada 2 segundos (ajusta según sea necesario)
+        }
+    </script>
+    </body>
+
+
+        
